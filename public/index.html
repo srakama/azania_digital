@@ -2,14 +2,104 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/favicon-16x16.svg" />
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="/favicon-32x32.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.svg" />
     <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#3b82f6" />
-    <meta name="description" content="AzaniaDigital - Modern Web Development Agency specializing in innovative digital solutions" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <title>AzaniaDigital - Modern Web Development Agency</title>
+
+    <!-- Critical Performance & Mobile Optimizations -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0EA5E9" />
+    <meta name="msapplication-TileColor" content="#0EA5E9" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="description" content="🚀 Professional web development services in South Africa. React, TypeScript, Next.js, AI integration, and modern web solutions. Fast, responsive, SEO-optimized websites that convert." />
+    <meta name="keywords" content="web development, React, TypeScript, Next.js, South Africa, Cape Town, mobile responsive, SEO optimization, AI integration, e-commerce, website maintenance, digital agency" />
+    <meta name="author" content="AzaniaDigital" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://azaniadigital.co.za/" />
+    <meta property="og:title" content="AzaniaDigital - Professional Web Development Services" />
+    <meta property="og:description" content="🚀 Professional web development services in South Africa. React, TypeScript, Next.js, AI integration, and modern web solutions." />
+    <meta property="og:site_name" content="AzaniaDigital" />
+    <meta property="og:locale" content="en_ZA" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://azaniadigital.co.za/" />
+    <meta property="twitter:title" content="AzaniaDigital - Professional Web Development Services" />
+    <meta property="twitter:description" content="🚀 Professional web development services in South Africa. React, TypeScript, Next.js, AI integration, and modern web solutions." />
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "AzaniaDigital",
+      "url": "https://azaniadigital.co.za",
+      "description": "Professional web development services in South Africa",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ZA",
+        "addressRegion": "Western Cape"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+27786511482",
+        "contactType": "customer service"
+      },
+      "sameAs": [
+        "https://wa.me/27786511482"
+      ],
+      "offers": {
+        "@type": "Service",
+        "name": "Web Development Services",
+        "description": "React, TypeScript, Next.js development and AI integration"
+      }
+    }
+    </script>
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="//wa.me" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Critical CSS for Performance -->
+    <style>
+      /* Critical above-the-fold styles */
+      body {
+        margin: 0;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      /* Prevent layout shift */
+      #root { min-height: 100vh; }
+    </style>
+
+    <title>AzaniaDigital - Professional Web Development Services | React, TypeScript, Next.js</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

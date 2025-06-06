@@ -1,0 +1,98 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="primaryGradientApple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9" />
+      <stop offset="25%" stop-color="#3B82F6" />
+      <stop offset="50%" stop-color="#6366F1" />
+      <stop offset="75%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#A855F7" />
+    </linearGradient>
+    <linearGradient id="accentGradientApple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="33%" stop-color="#0EA5E9" />
+      <stop offset="66%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#6366F1" />
+    </linearGradient>
+    <linearGradient id="circuitGradientApple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="33%" stop-color="#06B6D4" />
+      <stop offset="66%" stop-color="#0EA5E9" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Rounded background for iOS -->
+  <rect width="180" height="180" rx="40" fill="url(#primaryGradientApple)"/>
+  
+  <!-- Circuit board pattern -->
+  <g stroke="url(#circuitGradientApple)" stroke-width="4" fill="none" opacity="0.6">
+    <!-- Horizontal circuit lines -->
+    <path d="M20 45 L65 45 L65 70 L115 70 L115 45 L160 45"/>
+    <path d="M20 90 L45 90 L45 115 L135 115 L135 90 L160 90"/>
+    <path d="M20 135 L65 135 L65 115 L115 115 L115 135 L160 135"/>
+    
+    <!-- Vertical circuit lines -->
+    <path d="M45 20 L45 70 L65 70 L65 115 L45 115 L45 160"/>
+    <path d="M135 20 L135 70 L115 70 L115 115 L135 115 L135 160"/>
+  </g>
+  
+  <!-- Circuit connection nodes -->
+  <g fill="url(#accentGradientApple)" filter="url(#glow)">
+    <circle cx="45" cy="45" r="6"/>
+    <circle cx="65" cy="70" r="6"/>
+    <circle cx="115" cy="70" r="6"/>
+    <circle cx="135" cy="45" r="6"/>
+    <circle cx="45" cy="115" r="6"/>
+    <circle cx="135" cy="115" r="6"/>
+    <circle cx="65" cy="135" r="6"/>
+    <circle cx="115" cy="135" r="6"/>
+  </g>
+  
+  <!-- Central processor chip -->
+  <rect x="60" y="60" width="60" height="60" rx="8" fill="url(#primaryGradientApple)" stroke="url(#accentGradientApple)" stroke-width="3" filter="url(#glow)"/>
+  
+  <!-- Processor connection pins -->
+  <g fill="url(#circuitGradientApple)">
+    <!-- Left pins -->
+    <rect x="50" y="75" width="10" height="6"/>
+    <rect x="50" y="87" width="10" height="6"/>
+    <rect x="50" y="99" width="10" height="6"/>
+    
+    <!-- Right pins -->
+    <rect x="120" y="75" width="10" height="6"/>
+    <rect x="120" y="87" width="10" height="6"/>
+    <rect x="120" y="99" width="10" height="6"/>
+    
+    <!-- Top pins -->
+    <rect x="75" y="50" width="6" height="10"/>
+    <rect x="87" y="50" width="6" height="10"/>
+    <rect x="99" y="50" width="6" height="10"/>
+    
+    <!-- Bottom pins -->
+    <rect x="75" y="120" width="6" height="10"/>
+    <rect x="87" y="120" width="6" height="10"/>
+    <rect x="99" y="120" width="6" height="10"/>
+  </g>
+  
+  <!-- Central processing core -->
+  <circle cx="90" cy="90" r="18" fill="url(#circuitGradientApple)" filter="url(#glow)"/>
+  <circle cx="90" cy="90" r="12" fill="#FFFFFF" opacity="0.95"/>
+  
+  <!-- Company initial "A" for AzaniaDigital -->
+  <path d="M80 82 L90 68 L100 82 M83 78 L97 78" stroke="#1E293B" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Additional tech elements -->
+  <g stroke="url(#accentGradientApple)" stroke-width="2" fill="none" opacity="0.4">
+    <circle cx="30" cy="30" r="8"/>
+    <circle cx="150" cy="30" r="8"/>
+    <circle cx="30" cy="150" r="8"/>
+    <circle cx="150" cy="150" r="8"/>
+  </g>
+</svg>

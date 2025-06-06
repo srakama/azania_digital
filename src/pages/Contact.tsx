@@ -106,23 +106,204 @@ const Contact: React.FC = () => {
     <div style={{ paddingTop: '80px' }}>
       {/* Hero Section */}
       <section className="section" style={{
-        background: 'linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%)',
-        paddingTop: '6rem',
-        paddingBottom: '6rem'
+        background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #334155 100%)',
+        paddingTop: '8rem',
+        paddingBottom: '8rem',
+        position: 'relative',
+        overflow: 'hidden'
       }}>
-        <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-            <h1 className="section-title">Get In Touch</h1>
-            <p className="section-subtitle">
-              Ready to start your project? Let's discuss your ideas and create something amazing together.
-              Get a free consultation and quote today.
+        {/* Animated Background Elements */}
+        <div style={{
+          position: 'absolute',
+          top: '0',
+          left: '0',
+          right: '0',
+          bottom: '0',
+          background: `
+            radial-gradient(circle at 25% 75%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 75% 25%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.05) 0%, transparent 50%)
+          `,
+          animation: 'float 7s ease-in-out infinite'
+        }}></div>
+
+        {/* Communication Pattern */}
+        <div style={{
+          position: 'absolute',
+          top: '0',
+          left: '0',
+          right: '0',
+          bottom: '0',
+          backgroundImage: `
+            linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+            linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px',
+          opacity: '0.4'
+        }}></div>
+
+        <div className="container" style={{ position: 'relative', zIndex: '2' }}>
+          <div style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
+            {/* Contact Badge */}
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              background: 'rgba(99, 102, 241, 0.1)',
+              border: '1px solid rgba(99, 102, 241, 0.2)',
+              borderRadius: '50px',
+              padding: '0.5rem 1.5rem',
+              marginBottom: '2rem',
+              color: '#A78BFA',
+              fontSize: '0.875rem',
+              fontWeight: '600',
+              textTransform: 'uppercase',
+              letterSpacing: '0.05em'
+            }}>
+              <span style={{ fontSize: '1rem' }}>💬</span>
+              Let's Connect
+            </div>
+
+            <h1 style={{
+              fontSize: '4.5rem',
+              fontWeight: '900',
+              marginBottom: '2rem',
+              background: 'linear-gradient(135deg, #A78BFA 0%, #8B5CF6 25%, #6366F1 50%, #3B82F6 75%, #0EA5E9 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              lineHeight: '1.1',
+              textShadow: '0 0 40px rgba(99, 102, 241, 0.3)'
+            }}>
+              Start Your <br />
+              <span style={{
+                background: 'linear-gradient(135deg, #0EA5E9 0%, #06B6D4 50%, #10B981 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}>
+                Digital Journey
+              </span>
+            </h1>
+
+            {/* Contact Methods */}
+            <div style={{
+              display: 'flex',
+              justifyContent: 'center',
+              gap: '1rem',
+              marginBottom: '2rem',
+              flexWrap: 'wrap'
+            }}>
+              {[
+                { name: 'Free Consultation', icon: '💡' },
+                { name: 'Quick Response', icon: '⚡' },
+                { name: 'Expert Advice', icon: '🎯' },
+                { name: '24/7 Support', icon: '🛡️' }
+              ].map((method, index) => (
+                <span key={method.name} style={{
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  borderRadius: '8px',
+                  padding: '0.5rem 1rem',
+                  color: '#E2E8F0',
+                  fontSize: '0.875rem',
+                  fontWeight: '500',
+                  backdropFilter: 'blur(10px)',
+                  animation: `fadeIn 0.6s ease-out ${index * 0.1}s both`,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem'
+                }}>
+                  <span>{method.icon}</span>
+                  {method.name}
+                </span>
+              ))}
+            </div>
+
+            <p style={{
+              fontSize: '1.375rem',
+              color: '#94A3B8',
+              marginBottom: '3rem',
+              lineHeight: '1.7',
+              maxWidth: '700px',
+              margin: '0 auto 3rem'
+            }}>
+              Ready to transform your digital presence? Let's discuss your
+              <span style={{ color: '#A78BFA', fontWeight: '600' }}> project requirements</span> and create
+              <span style={{ color: '#38BDF8', fontWeight: '600' }}> innovative solutions</span> that drive
+              <span style={{ color: '#34D399', fontWeight: '600' }}>measurable results</span>.
             </p>
+
+            <div style={{
+              display: 'flex',
+              gap: '1.5rem',
+              justifyContent: 'center',
+              flexWrap: 'wrap',
+              marginBottom: '3rem'
+            }}>
+              <a href="#contact-form" className="btn btn-primary btn-lg" style={{
+                background: 'linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #A855F7 100%)',
+                boxShadow: '0 10px 30px rgba(99, 102, 241, 0.3)',
+                border: 'none',
+                textDecoration: 'none'
+              }}>
+                <span style={{ marginRight: '0.5rem' }}>📝</span>
+                Send Message
+              </a>
+              <a href="https://wa.me/27786511482" className="btn btn-secondary btn-lg" style={{
+                background: 'rgba(255, 255, 255, 0.1)',
+                color: '#E2E8F0',
+                border: '2px solid rgba(255, 255, 255, 0.2)',
+                backdropFilter: 'blur(10px)',
+                textDecoration: 'none'
+              }}>
+                <span style={{ marginRight: '0.5rem' }}>📱</span>
+                WhatsApp Direct
+              </a>
+            </div>
+
+            {/* Contact Stats */}
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+              gap: '2rem',
+              maxWidth: '600px',
+              margin: '0 auto'
+            }}>
+              {[
+                { number: '<24h', label: 'Response Time', color: '#A78BFA' },
+                { number: '100%', label: 'Free Consultation', color: '#38BDF8' },
+                { number: '50+', label: 'Happy Clients', color: '#34D399' },
+                { number: '24/7', label: 'Support Available', color: '#F59E0B' }
+              ].map((stat, index) => (
+                <div key={stat.label} style={{
+                  textAlign: 'center',
+                  animation: `fadeIn 0.8s ease-out ${index * 0.2}s both`
+                }}>
+                  <div style={{
+                    fontSize: '1.75rem',
+                    fontWeight: '900',
+                    color: stat.color,
+                    marginBottom: '0.5rem'
+                  }}>
+                    {stat.number}
+                  </div>
+                  <div style={{
+                    fontSize: '0.875rem',
+                    color: '#94A3B8',
+                    fontWeight: '500'
+                  }}>
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Contact Form & Info Section */}
-      <section className="section">
+      <section id="contact-form" className="section">
         <div className="container">
           <div className="grid grid-cols-2" style={{ gap: '4rem', alignItems: 'start' }}>
             {/* Contact Form */}
@@ -479,7 +660,9 @@ const Contact: React.FC = () => {
                         borderRadius: '8px',
                         fontSize: '1rem',
                         transition: 'border-color 0.3s ease',
-                        outline: 'none'
+                        outline: 'none',
+                        color: '#1E293B',
+                        backgroundColor: 'white'
                       }}
                       onFocus={(e) => e.target.style.borderColor = '#0EA5E9'}
                       onBlur={(e) => e.target.style.borderColor = '#E2E8F0'}
@@ -508,7 +691,9 @@ const Contact: React.FC = () => {
                         borderRadius: '8px',
                         fontSize: '1rem',
                         transition: 'border-color 0.3s ease',
-                        outline: 'none'
+                        outline: 'none',
+                        color: '#1E293B',
+                        backgroundColor: 'white'
                       }}
                       onFocus={(e) => e.target.style.borderColor = '#0EA5E9'}
                       onBlur={(e) => e.target.style.borderColor = '#E2E8F0'}
@@ -538,7 +723,9 @@ const Contact: React.FC = () => {
                         borderRadius: '8px',
                         fontSize: '1rem',
                         transition: 'border-color 0.3s ease',
-                        outline: 'none'
+                        outline: 'none',
+                        color: '#1E293B',
+                        backgroundColor: 'white'
                       }}
                       onFocus={(e) => e.target.style.borderColor = '#0EA5E9'}
                       onBlur={(e) => e.target.style.borderColor = '#E2E8F0'}
@@ -566,7 +753,8 @@ const Contact: React.FC = () => {
                         fontSize: '1rem',
                         transition: 'border-color 0.3s ease',
                         outline: 'none',
-                        backgroundColor: 'white'
+                        backgroundColor: 'white',
+                        color: '#1E293B'
                       }}
                       onFocus={(e) => e.target.style.borderColor = '#0EA5E9'}
                       onBlur={(e) => e.target.style.borderColor = '#E2E8F0'}
@@ -604,7 +792,8 @@ const Contact: React.FC = () => {
                       fontSize: '1rem',
                       transition: 'border-color 0.3s ease',
                       outline: 'none',
-                      backgroundColor: 'white'
+                      backgroundColor: 'white',
+                      color: '#1E293B'
                     }}
                     onFocus={(e) => e.target.style.borderColor = '#0EA5E9'}
                     onBlur={(e) => e.target.style.borderColor = '#E2E8F0'}
@@ -643,7 +832,9 @@ const Contact: React.FC = () => {
                       transition: 'border-color 0.3s ease',
                       outline: 'none',
                       resize: 'vertical',
-                      fontFamily: 'inherit'
+                      fontFamily: 'inherit',
+                      color: '#1E293B',
+                      backgroundColor: 'white'
                     }}
                     onFocus={(e) => e.target.style.borderColor = '#0EA5E9'}
                     onBlur={(e) => e.target.style.borderColor = '#E2E8F0'}
@@ -696,7 +887,7 @@ const Contact: React.FC = () => {
                       📧
                     </div>
                     <div>
-                      <h4 style={{ fontWeight: '600', marginBottom: '0.25rem' }}>Email</h4>
+                      <h4 style={{ fontWeight: '600', marginBottom: '0.25rem', color: '#1E293B' }}>Email</h4>
                       <a href="mailto:hello@azaniadigital.co.za" style={{
                         color: '#0EA5E9',
                         textDecoration: 'none',
@@ -721,7 +912,7 @@ const Contact: React.FC = () => {
                       📱
                     </div>
                     <div>
-                      <h4 style={{ fontWeight: '600', marginBottom: '0.25rem' }}>Phone</h4>
+                      <h4 style={{ fontWeight: '600', marginBottom: '0.25rem', color: '#1E293B' }}>Phone</h4>
                       <a href="tel:+27786511482" style={{
                         color: '#10B981',
                         textDecoration: 'none',
@@ -746,7 +937,7 @@ const Contact: React.FC = () => {
                       📍
                     </div>
                     <div>
-                      <h4 style={{ fontWeight: '600', marginBottom: '0.25rem' }}>Location</h4>
+                      <h4 style={{ fontWeight: '600', marginBottom: '0.25rem', color: '#1E293B' }}>Location</h4>
                       <p style={{ color: '#64748B', fontSize: '1.1rem', margin: 0 }}>
                         Cape Town, South Africa
                       </p>

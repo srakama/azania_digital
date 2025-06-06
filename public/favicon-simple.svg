@@ -1,0 +1,39 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9" />
+      <stop offset="50%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#6366F1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="32" cy="32" r="30" fill="url(#bg)"/>
+  
+  <!-- Simple circuit pattern -->
+  <g stroke="#06B6D4" stroke-width="2" fill="none" opacity="0.7">
+    <path d="M8 16 L24 16 L24 24 L40 24 L40 16 L56 16"/>
+    <path d="M8 32 L16 32 L16 40 L48 40 L48 32 L56 32"/>
+    <path d="M8 48 L24 48 L24 40 L40 40 L40 48 L56 48"/>
+  </g>
+  
+  <!-- Connection points -->
+  <g fill="#06B6D4">
+    <circle cx="16" cy="16" r="2"/>
+    <circle cx="24" cy="24" r="2"/>
+    <circle cx="40" cy="24" r="2"/>
+    <circle cx="48" cy="16" r="2"/>
+    <circle cx="16" cy="40" r="2"/>
+    <circle cx="48" cy="40" r="2"/>
+  </g>
+  
+  <!-- Central chip -->
+  <rect x="24" y="24" width="16" height="16" rx="2" fill="url(#bg)" stroke="#06B6D4" stroke-width="1.5"/>
+  
+  <!-- Core -->
+  <circle cx="32" cy="32" r="4" fill="#06B6D4"/>
+  <circle cx="32" cy="32" r="2" fill="#FFFFFF"/>
+  
+  <!-- Letter A -->
+  <path d="M28 28 L32 22 L36 28 M29.5 26 L34.5 26" stroke="#1E293B" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg>
