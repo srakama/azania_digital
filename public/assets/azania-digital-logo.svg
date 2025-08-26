@@ -1,0 +1,61 @@
+<svg width="1000" height="400" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF" />
+      <stop offset="25%" stop-color="#0EA5E9" />
+      <stop offset="50%" stop-color="#3B82F6" />
+      <stop offset="75%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06FFA5" />
+      <stop offset="50%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#0EA5E9" />
+    </linearGradient>
+    <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#3B82F6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Transparent background (no rect) -->
+
+  <!-- Logo Icon -->
+  <g transform="translate(20, 40)">
+    <!-- Outer glow ring -->
+    <circle cx="0" cy="0" r="18" fill="url(#glowGradient)" opacity="0.6"/>
+
+    <!-- Main circular background -->
+    <circle cx="0" cy="0" r="16" fill="url(#mainGradient)" stroke="url(#accentGradient)" stroke-width="1.5" opacity="0.95"/>
+
+    <!-- Inner geometric pattern -->
+    <g opacity="0.3">
+      <polygon points="0,-8 8,0 0,8 -8,0" fill="none" stroke="url(#accentGradient)" stroke-width="1"/>
+      <polygon points="0,-4 4,0 0,4 -4,0" fill="none" stroke="url(#accentGradient)" stroke-width="0.8"/>
+    </g>
+
+    <!-- Stylized "A" for Azania -->
+    <path d="M-6,-8 L0,-8 L6,8 L3,8 L1.5,4 L-1.5,4 L-3,8 L-6,8 Z M-1,0 L1,0 L0,-3 Z"
+          fill="url(#accentGradient)" stroke="white" stroke-width="0.5"/>
+
+    <!-- Digital accent dots -->
+    <circle cx="-8" cy="-2" r="1" fill="url(#accentGradient)" opacity="0.8"/>
+    <circle cx="8" cy="-2" r="1" fill="url(#accentGradient)" opacity="0.8"/>
+    <circle cx="-8" cy="2" r="1" fill="url(#accentGradient)" opacity="0.6"/>
+    <circle cx="8" cy="2" r="1" fill="url(#accentGradient)" opacity="0.6"/>
+
+    <!-- Connecting lines -->
+    <line x1="-7" y1="-2" x2="-6" y2="-4" stroke="url(#accentGradient)" stroke-width="0.8" opacity="0.5"/>
+    <line x1="7" y1="-2" x2="6" y2="-4" stroke="url(#accentGradient)" stroke-width="0.8" opacity="0.5"/>
+  </g>
+
+  <!-- Logo Text -->
+  <g transform="translate(60, 40)">
+    <text x="0" y="-8" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="900"
+          fill="url(#mainGradient)" letter-spacing="-0.5px">AZANIA</text>
+    <text x="0" y="8" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700"
+          fill="url(#accentGradient)" letter-spacing="2px">DIGITAL</text>
+  </g>
+</svg>
+

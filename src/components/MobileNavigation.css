@@ -1,0 +1,296 @@
+/* Mobile Navigation Responsive Styles */
+
+/* Desktop styles (default) */
+.desktop-menu {
+  display: flex !important;
+}
+
+.mobile-menu-button {
+  display: none !important;
+}
+
+.desktop-cta {
+  display: block !important;
+}
+
+/* Tablet and Mobile styles */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none !important;
+  }
+  
+  .mobile-menu-button {
+    display: flex !important;
+  }
+  
+  .desktop-cta {
+    display: none !important;
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mobile menu specific styles */
+.mobile-nav-container {
+  /* Ensure proper stacking */
+  z-index: 10000;
+}
+
+/* Touch-friendly mobile menu items */
+@media (max-width: 768px) {
+  .mobile-menu-item {
+    min-height: 48px; /* Minimum touch target size */
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-menu-item:active {
+    transform: scale(0.98);
+    background: rgba(14, 165, 233, 0.2) !important;
+  }
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+}
+
+/* Improve touch scrolling on iOS */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Focus styles for accessibility */
+.mobile-nav-container a:focus,
+.mobile-nav-container button:focus {
+  outline: 2px solid #0EA5E9;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .mobile-nav-container {
+    background: rgba(0, 0, 0, 0.95) !important;
+    border-bottom: 2px solid white !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .mobile-nav-container {
+    background: rgba(15, 23, 42, 0.95);
+  }
+}
+
+/* Print styles */
+@media print {
+  .mobile-nav-container {
+    display: none !important;
+  }
+}
+
+/* Landscape mobile styles */
+@media (max-width: 768px) and (orientation: landscape) {
+  .mobile-menu-overlay {
+    padding: 1rem;
+  }
+  
+  .mobile-menu-content {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+  .mobile-nav-container {
+    padding: 0.5rem 0;
+  }
+  
+  .mobile-nav-container .container {
+    padding: 0 1rem;
+  }
+  
+  .logo {
+    font-size: 1.25rem !important;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .desktop-menu {
+    gap: 3rem;
+  }
+  
+  .desktop-cta {
+    padding: 1rem 2rem !important;
+  }
+}
+
+/* Hover effects for desktop */
+@media (hover: hover) and (pointer: fine) {
+  .nav-link:hover {
+    transform: translateY(-2px);
+  }
+  
+  .desktop-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4) !important;
+  }
+}
+
+/* Focus-visible for better keyboard navigation */
+.nav-link:focus-visible,
+.desktop-cta:focus-visible,
+.mobile-menu-button:focus-visible {
+  outline: 2px solid #0EA5E9;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Loading states */
+.nav-loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Error states */
+.nav-error {
+  color: #EF4444 !important;
+}
+
+/* Success states */
+.nav-success {
+  color: #10B981 !important;
+}
